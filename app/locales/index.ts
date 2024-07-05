@@ -95,12 +95,16 @@ function setItem(key: string, value: string) {
   } catch {}
 }
 
+// function getLanguage() {
+//   try {
+//     return navigator.language.toLowerCase();
+//   } catch {
+//     return DEFAULT_LANG;
+//   }
+// }
+
 function getLanguage() {
-  try {
-    return navigator.language.toLowerCase();
-  } catch {
-    return DEFAULT_LANG;
-  }
+  return DEFAULT_LANG;
 }
 
 export function getLang(): Lang {

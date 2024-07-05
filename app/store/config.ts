@@ -40,14 +40,14 @@ export const DEFAULT_CONFIG = {
 
   disablePromptHint: false,
 
-  dontShowMaskSplashScreen: false, // dont show splash screen when create chat
+  dontShowMaskSplashScreen: true, // dont show splash screen when create chat
   hideBuiltinMasks: false, // dont add builtin masks
 
   customModels: "",
   models: DEFAULT_MODELS as any as LLMModel[],
 
   modelConfig: {
-    model: "gpt-3.5-turbo" as ModelType,
+    model: "gpt-4o" as ModelType,
     temperature: 0.5,
     top_p: 1,
     max_tokens: 4000,
@@ -144,7 +144,7 @@ export const useAppConfig = createPersistStore(
         state.modelConfig.frequency_penalty = 0;
         state.modelConfig.top_p = 1;
         state.modelConfig.template = DEFAULT_INPUT_TEMPLATE;
-        state.dontShowMaskSplashScreen = false;
+        state.dontShowMaskSplashScreen = true;
         state.hideBuiltinMasks = false;
       }
 
